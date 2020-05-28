@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mike's Sorting Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">MIKE'S SORTING VISUALIZER</div>
+        <button id="headerbutton">About Me</button>
+        <button id="headerbutton">Sorts</button>
+        <button id="headerbutton">Home</button>
+    </header>
+    <div id="container">
+        <div id="description">Welcome to Quicksort! Quicksort is an algorithm that works by taking an array, and assigning a “pivot” value to the first element in that array. There are also two values that the algorithm continually compares to the pivot, an “i” value, and a “j” value. The i value begins at the beginning of the array, and continues moving right until a value is found that is greater than the pivot value. The j value, on the other hand, begins at the last index of the array, and continues moving left until a value less than or equal to the value of the pivot is found. When the indices of the i value and j value have been found, the elements at those indices will switch places. This will continue to happen until values are found where the j index is either in the same place or farther left than the i index. When this is the case, the j element switches places with the pivot element, and the newly placed pivot element is in “sorted position,” meaning that every element to the left of it is lower in value, and every element to the right of it is greater in value. Then the array splits into two sub-arrays based on the remaining unsorted elements on each side of the sorted element. This process continues recursively, until the entire array is sorted! Cool, right? This visualizer will show you how that process works, and hopefully help you achieve a greater understanding of the algorithm. If you are really trying to understand how the algorithm works, set the speed to a slow setting. A key can be found under the blue sorting area. <strong>For a sort with more elements, expand the width of your browser and refresh the page. Do the opposite to get less elements.</strong> Enjoy!</p>
+        <div id="under_description">Choose Sorting Speed:
+            <input type="radio" id="very_slow_button" name="speed_button" value="verySlow"></input>
+            <label for="very_slow_button">Very Slow</label>
+            <input type="radio" id="slow_button" name="speed_button" value=6.25></input>
+            <label for="slow_button">Slow</label>
+            <input type="radio" id="medium_button" name="speed_button" 12.5></input>
+            <label for="medium_button">Medium</label>
+            <input type="radio" id="fast_button" name="speed_button"></input>
+            <label for="fast_button">Fast</label>
+        </div>
+        <div id="under_description">Ready:
+            <button onclick="main()" id="action_button">SORT!</button>
+            <button onclick="pause()" id="action_button">Pause/Resume</button>
+            <button onclick="reset()" id="action_button">Reset</button>
+        </div>
+        <div id="error_message1"></div>
+        <div id="error_message2"></div>
+        <div id="question">What's Happening?</div>
+        <div id="whats_happening"></div>
+    </div>
+    <canvas></canvas>
+    <div id="key">
+        <div id="keylabel">Key</div>
+        <div id="keyblock1"></div>
+        <div id="keylabel1">= Unsorted Element</div>
+        <div id="keyblock2"></div>
+        <div id="keylabel2">= In Sorted Position</div>
+    </div>
+    <script src="quickSort.js"></script>
+</body>
+</html> 
